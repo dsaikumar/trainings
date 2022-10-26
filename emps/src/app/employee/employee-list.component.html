@@ -1,0 +1,26 @@
+<div class="t-emp-list">
+  <h2>Employee - List</h2>
+  <table border="1" class="width100">
+    <thead>
+      <tr>
+        <th>Employee Name</th>
+        <th>Employee Salary</th>
+        <th>High/Medium/Low</th>
+        <th>Operations</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees; index as i;">
+        <td [textContent]="employee.name"></td>
+        <td><input type="number" min="1" class="width99" [(ngModel)]="employee.salary"/></td>
+        <td>
+          <span [class]="employee.salary|statusOfSalary:['happy', 'ok', 'notok']"
+            [textContent]="employee.salary|statusOfSalary"></span>
+        </td>
+        <td>
+          <button (click)="editEmployee(i)">Edit</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
