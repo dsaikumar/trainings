@@ -35,7 +35,11 @@ export class EmployeeManageComponent{
     this.employeeApiService.saveEmployee(this.newEmployeeObject)
     .then(()=>{
       this.goToEmployeeList();
-    });
+    })
+    .catch((err: any)=>{
+      console.log(err);
+    })
+    .finally()
   }
   updateEmployee(){
     let existingEmployee: Employee = this.employeeUtilService.employees[this.editIndex];

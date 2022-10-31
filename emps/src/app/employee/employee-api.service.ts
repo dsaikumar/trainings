@@ -15,6 +15,9 @@ export class EmployeeApiService {
   }
   getEmployees() : Promise<Employee[]>{
     let temp: Observable<Employee[]> = this.httpClient.get<Employee[]>('api/get/all/employees');
+    temp.subscribe((updatedData: any)=>{
+      console.log(updatedData);
+    });
     return firstValueFrom(temp);
   }
 }

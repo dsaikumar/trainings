@@ -27,3 +27,10 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 
+Promise and Behaviour subject
+
+XHR - XmlHttpRequest - Integrate Api's in the application, we generally refer it is AJAX
+
+Promise - Calling the API it will either return the response or Throw an exception
+
+Observable - Used to continous Watch on your events or data

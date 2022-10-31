@@ -16,12 +16,17 @@ export class EmployeeListComponent{
   constructor(private employeeUtilService: EmployeeUtilService, private router: Router, private salaryStatusPipe: StatusOfSalaryPipe,
     private employeeApiService: EmployeeApiService){
     // this.employees = this.employeeUtilService.employees;
+    this.loadEmployeesFromAPI();
   }
   loadEmployeesFromAPI(){
-    this.employeeApiService.getEmployees()
-    .then((employeeList: Employee[])=>{
+    const tempPromise = this.employeeApiService.getEmployees();
+    tempPromise.then((employeeList: Employee[])=>{
       this.employees = employeeList;
-    });
+    })
+    .catch((err: any)=>{
+      console.log(err);
+    })
+    .finally()
   }
   evaluate(salary : number){
     return this.salaryStatusPipe.transform(salary, [['happy', 'ok', 'notok']]);

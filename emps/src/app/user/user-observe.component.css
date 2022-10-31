@@ -1,0 +1,41 @@
+.container{
+  position: relative
+}
+.green-border{
+  border-color: green;
+  border-width: 1px;
+  border-style: solid;
+}
+.red-border{
+  border-color: red;
+  border-width: 1px;
+  border-style: solid;
+}
+.blue-border{
+  border-color: blue;
+  border-width: 1px;
+  border-style: solid;
+}
+.carbon-border{
+  border-color: #333;
+  border-width: 1px;
+  border-style: solid;
+}
+.child{
+  position: absolute;
+  height: 400px;
+  width: 300px;
+}
+.position1{
+  left : 50px;
+}
+
+.position2{
+  right: 50px;
+}
+.position3{
+  left: 500px;
+}
+.p10{
+  padding: 10px;
+}
