@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -10,6 +10,7 @@ import { EmployeeListComponent } from './employee/employee-list.component';
 import { EmployeeManageComponent } from './employee/employee-manage.component';
 import { StatusOfSalaryPipe } from './employee/status-of-salary.pipe';
 import { UserObserveComponent } from './user/user-observe.component';
+import { UserFormControlComponent } from './user/user-form-control.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +18,14 @@ import { UserObserveComponent } from './user/user-observe.component';
     EmployeeListComponent,
     EmployeeManageComponent,
     StatusOfSalaryPipe,
-    UserObserveComponent
+    UserObserveComponent,
+    UserFormControlComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     CommonModule,
     HttpClientModule
   ],
