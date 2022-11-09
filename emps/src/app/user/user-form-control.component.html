@@ -1,5 +1,9 @@
 <div>
   <h1>Welcome to Form Controls</h1>
-  <div><input type="text"  [formControl]="name" /></div>
-  <div><button (click)="updateName()">Update the name to Hyderabad</button></div>
+  <form [formGroup]="loginGroup" (ngSubmit)="formSubmitted()">
+    <div><span>Name :&nbsp;</span><input type="text"  formControlName="name" /></div>
+    <div><span>Password :&nbsp;</span><input type="text"  formControlName="password" /></div>
+    <div><button (click)="updateName()">Update the name to Hyderabad</button></div>
+    <div><button type="submit">Submit</button></div>
+  </form>
 </div>
